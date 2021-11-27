@@ -1,0 +1,188 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - very good
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: ask_member
+  examples: |
+    - How do I become a member
+    - I'd like to ask about the membership system.
+- intent: ask_expirationtime
+  examples: |
+    - When is the expiry date of my membership
+    - May I ask when the membership member expires
+    - How long before my membership expires
+    - How many days my membership has left ?
+- intent: ask_usernum
+  examples: |
+    - My user ID is [11111](num)
+    - [123456](num)
+    - [111111](num) is my num.
+    - my id is [1111](num)
+    - [10002](num)
+    - [10002](num)
+- intent: ask_balance
+  examples: |
+    - What's my balance, please?
+    - How much money do I have in my account, please?
+    - i want to check my balance
+- intent: ask_buyalbum
+  examples: |
+    - How should I buy a digital album?
+    - How do I get an album?
+- intent: password_lost
+  examples: |
+    - I forgot my password, could you help me reset it
+    - I forgot my password
+    - I lost my password
+    - my password is lost
+- intent: ask_song
+  examples: |
+    - I want to find [let it go](song)
+    - Can you help me find the song [lemon Tree](song)
+    - Is there a song [Beat It](song)
+    - Help me find [Beautiful](song)
+    - Show me [Sick](song)
+    - [my heart will go on](song)
+    - i want to search the song [lemon tree](song)
+- intent: ask_help
+  examples: |
+    - I need help
+    - Can you help me
+    - What can you do
+    - list your function
+    - show me function list
+    - Give me the menu
+- intent: register
+  examples: |
+    - I do not have an account
+    - I want to register an account
+    - regist
+    - can i have an account
+- intent: buy_member
+  examples: |
+    - I'd like to buy a [one month](time) membership
+    - I want to subscribe to the [six-month](time) membership servic
+    - Please renew my membership for [one year](time)
+    - I'd like to extend my membership for another [five years](time)
+- intent: ask_problems
+  examples: |
+    - I can't play music properly
+    - I am not connected to the server
+    - I couldn't load the data
+    - I ran into some difficulties
+    - I'm having some problems right now
+- intent: ask_human
+  examples: |
+    - Robots can't solve my problems
+    - I need to contact the human supervisor
+    - Please put me through to human service
+    - I need human help to solve my problems
+- intent: ask_email
+  examples: |
+    - My email address is [1111@aa.com](email)
+    - [1111@aa.fi](email) is my email
+    - [1111@aa.com](email)
+- intent: ask_name
+  examples: |
+    - My name is [Zou Runlin](name)
+    - [Zourunlin](name) is my name
+    - [Zourunlin](name)
+- intent: ask_top
+  examples: |
+    - I'd like to charge [1000](account) yuan to my account
+    - Top up [100](account) yuan
+    - add [100](account) to my account
+- intent: ask_singer
+  examples: |
+    - I want to find all the songs of [singer](singer)
+    - Can you help me find [singer](singer)'s song
+    - What works [singer](singer) has
+    - Show me all the songs of [singer](singer)
+    - What songs does the [singer](singer) have
+    - i want to seach the song of [eason chen](singer)
+- intent: collect
+  examples: |
+    - I want to collect [song](song)
+    - Add [song](song) to my collection
+    - Can you save [song](song) for me
+- intent: show_collection
+  examples: |
+    - Show me the collection
+    - What songs I have in my collection
+    - I want to know what songs are in my collection

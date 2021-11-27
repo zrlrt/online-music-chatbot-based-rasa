@@ -1,0 +1,138 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- ask_usernum
+- greet
+- ask_singer
+- mood_great
+- ask_song
+- ask_balance
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+- ask_member
+- ask_expirationtime
+- ask_buyalbum
+- password_lost
+- ask_help
+- register
+- buy_member
+- ask_problems
+- ask_human
+- ask_name
+- ask_email
+- ask_top
+- collect
+- show_collection
+entities:
+- account
+- email
+- name
+- num
+- singer
+- song
+- time
+slots:
+  account:
+    type: text
+    influence_conversation: true
+  singer:
+    type: text
+    influence_conversation: true
+  name:
+    type: text
+    influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
+  time:
+    type: text
+    influence_conversation: true
+  song:
+    type: text
+    influence_conversation: true
+  num:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hello,I am your exclusive robot customer service,happy to serve you!
+  - text: Hello,I am your exclusive robot customer service,how can I help you?
+  utter_cheer_up:
+  - text: cheer
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great,carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_askservice:
+  - text: |-
+      Hello, what kind of service do you need? FAQ:
+      1. Account balance query
+      2. Membership expiration time query
+      3. Members handle service consultation
+      4. Search songs by name or singer
+      5. Help and Complaint 
+  utter_askemail:
+  - text: Please enter your email address
+  utter_register:
+  - text: Do you want to registe a new account?
+  utter_responsetime:
+  - text: Your membership expiration date is
+  utter_askprice:
+  - text: What price are you interested in?
+  - text: We will offer you four memberships ranging from 15 to 690. What is your preferred price?
+  utter_responsbalance:
+  - text: Your account balance is
+  utter_liststep:
+  - text: Here is how to buy a digital album, please refer to
+  utter_memberintroduction:
+  - text: We offer you four kinds of membership \n namely monthly membership $15\nhalf-yearly membership$88\nannual membership $158\nfive-year long-term membership 690$\n Members enjoy exclusive songs, 300 free downloads per month, exclusive customer service and other privileges.
+  utter_bestplan:
+  - text: Hello, according to your needs, the most suitable membership for you is\n monthly membership service\nhalf-year membership service\nannual membership service\nfive-year long-term membership service'
+  utter_defaultanswer:
+  - text: Sorry, no information matching this question, please adjust the question and the keyword to enter again.
+  utter_askaccount:
+  - text: please input your user id
+  utter_askname:
+  - text: Please input your name.
+  utter_help:
+  - text: |-
+      According to the problem you raised, you can refer to the following solution
+      1. Connect to human customer service
+      2. Call 0000-1234567
+      Working hours 8:00-12:00, 14:00-18:00, we will serve you wholeheartedly.
+  utter_askfeedback:
+  - text: Do you have any questions? If the problem has been resolved, please comment on our service below, thank you for your cooperation!
+actions:
+- action_check_balance
+- action_check_collect
+- action_check_member
+- action_check_user
+- action_collect
+- action_get_member
+- action_register
+- action_search_singer
+- action_search_song
+- action_top_up
+- utter_askaccount
+- utter_askfeedback
+- utter_askservice
+- utter_did_that_help
+- utter_greet
+forms:
+  user_details_form:
+    required_slots:
+      email:
+      - entity: email
+        type: from_entity
+      name:
+      - entity: name
+        type: from_entity

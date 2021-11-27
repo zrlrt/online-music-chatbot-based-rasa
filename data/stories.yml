@@ -1,0 +1,117 @@
+version: "2.0"
+
+stories:
+
+- story: check_balance
+  steps:
+  - intent: ask_balance
+  - action: action_check_balance
+  - action: utter_did_that_help
+
+- story: search_song
+  steps:
+  - intent: ask_song
+    entities:
+    - song: song_name
+  - slot_was_set:
+    - song: song_name
+  - action: action_search_song
+  - action: utter_askfeedback
+  - intent: mood_great
+
+- story: search_singer
+  steps:
+  - intent: ask_singer
+    entities:
+    - singer: eason chen
+  - slot_was_set:
+    - singer: eason chen
+  - action: action_search_singer
+
+- story: register
+  steps:
+  - intent: register
+  - action: utter_askname
+  - intent: ask_name
+    entities:
+    - name: ZouRunlin
+  - slot_was_set:
+    - singer: ZouRunlin
+  - action: utter_askemail
+  - intent: ask_email
+    entities:
+    - name: 11111@11.com
+  - slot_was_set:
+    - singer: 11111@11.com
+  - action: action_register
+
+- story: add to collection
+  steps:
+  - intent: collect
+    entities:
+    - song: song
+  - slot_was_set:
+    - song: song
+  - action: action_collect
+
+- story: show collection
+  steps:
+  - intent: show_collection
+  - action: action_check_collect
+
+- story: top up
+  steps:
+  - intent: ask_top
+    entities:
+    - account: 100
+  - slot_was_set:
+    - account: 100
+  - action: action_top_up
+
+- story: check member
+  steps:
+  - intent: ask_expirationtime
+  - action: action_check_member
+
+- story: get member
+  steps:
+  - intent: buy_member
+    entities:
+    - time: one month
+  - slot_was_set:
+    - time: one month
+  - action: action_get_member
+
+- story: get_member
+  steps:
+  - intent: ask_member
+  - action: utter_memberintroduction
+  - intent: buy_member
+    entities:
+    - time: one month
+  - slot_was_set:
+    - time: one month
+  - action: action_get_member
+
+- story: ask some problems
+  steps:
+  - intent: ask_problems
+  - action: utter_help
+  - action: utter_askfeedback
+
+- story: show the mean
+  steps:
+  - intent: ask_help
+  - action: utter_askservice
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askaccount
+  - intent: ask_usernum
+    entities:
+    - num: '10002'
+  - slot_was_set:
+    - num: '10002'
+  - action: utter_askservice
